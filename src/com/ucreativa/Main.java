@@ -1,26 +1,34 @@
 package com.ucreativa;
 
-import com.ucreativa.familia.Guiss;
-import com.ucreativa.familia.Kike;
+import com.ucreativa.vacunacion.Amigo;
+import com.ucreativa.vacunacion.BitacoraVacunas;
+import com.ucreativa.vacunacion.Familiar;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Kike yo = new Kike("Tuanis",
-                26,
-                "Ciclismo");
-        Guiss mama = new Guiss("Diay Pa",
-                69,
-                "Jardineria");
+        Familiar mama = new Familiar("Guiss", "123", 69,
+                true, "Mama");
 
-        mama.setAge();
+        Familiar hermano = new Familiar("Chiny", "456", 39,
+                false, "Hermano");
 
-        int edad = mama.getAge();
+        Amigo roommate = new Amigo("Tony", "789", 33,
+                false, "Roommate", "No se");
 
-        System.out.println("La edad de mi mama Guiss es: " + edad);
+        List<BitacoraVacunas> bitacora = new ArrayList<>();
+        bitacora.add(new BitacoraVacunas(mama, "Pfizer",
+                new Date()));
+        bitacora.add(new BitacoraVacunas(hermano, "AstraZeneca",
+                new Date()));
+        bitacora.add(new BitacoraVacunas(roommate, "Johnson",
+                new Date()));
 
 
     }
-
 }

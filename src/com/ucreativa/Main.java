@@ -1,4 +1,4 @@
-package com.ucreativa.vacunacion;
+package com.ucreativa;
 
 import com.ucreativa.vacunacion.entities.Amigo;
 import com.ucreativa.vacunacion.entities.BitacoraVacunas;

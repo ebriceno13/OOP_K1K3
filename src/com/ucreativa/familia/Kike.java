@@ -1,8 +1,15 @@
 package com.ucreativa.familia;
 
-public class Kike {
+public class Kike extends Guiss {
 
-    public Kike() {
-        System.out.println("Yo soy Kike");
+    private String saludo;
+
+    public Kike(String saludo, int age, String hobby) {
+        super(saludo, age, hobby);
+        this.saludo = saludo;
+    }
+
+    public String getSaludo() {
+        return this.saludo;
     }
 }

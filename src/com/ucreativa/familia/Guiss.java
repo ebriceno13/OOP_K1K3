@@ -5,15 +5,13 @@ public class Guiss {
     private int age;
     private String hobby;
 
-    public Guiss(String saludo) {
+    public Guiss(String saludo, int age,
+                 String hobby) {
         this.age = 69;
-        this.hobby = "Jardineria";
+        this.hobby = hobby;
         System.out.println(saludo);
     }
 
-    public String getHobby() {
-        return hobby;
-    }
 
     public void setAge() {
         this.age = this.age + 1;

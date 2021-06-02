@@ -16,4 +16,5 @@ public class Main {
         System.out.println("El hobby de mi mama es: " + mama.getHobby());
 
     }
+
 }

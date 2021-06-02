@@ -14,5 +14,6 @@ public class Main {
 
         System.out.println("La edad de mi mama Guiss es: " + edad);
         System.out.println("El hobby de mi mama es: " + mama.getHobby());
+
     }
 }

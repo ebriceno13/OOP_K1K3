@@ -16,4 +16,9 @@ public class Familiar extends Persona{
     public String getParentesco() {
         return parentesco;
     }
+
+    @Override
+    public String toString() {
+        return this.parentesco + " " + super.getNombre();
+    }
 }

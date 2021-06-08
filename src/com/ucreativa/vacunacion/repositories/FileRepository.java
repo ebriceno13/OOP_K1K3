@@ -26,9 +26,9 @@ public class FileRepository implements Repository{
                 file.createNewFile();
             }
 
-        FileWriter fw = new FileWriter(file);
+        FileWriter fw = new FileWriter(file, true);
         BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(persona.getNombre() + " - " + " - " + marca+ " - " + format.format(fecha));
+        bw.append(persona.getNombre() + " - " + " - " + marca+ " - " + format.format(fecha));
         bw.close();
     } catch (Exception e) {
         e.printStackTrace();

@@ -9,19 +9,20 @@ import com.ucreativa.vacunacion.repositories.InMemoryRepository;
 import com.ucreativa.vacunacion.repositories.Repository;
 
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         Scanner in = new Scanner(System.in);
         Repository repo = new FileRepository();
         String nombre, cedula, edad, riesgo, isAmigo,
                 relacion, facebook, parenteso, marca, print;
         Persona persona;
-        while (true ) {
+        while (true) {
             System.out.println("Nombre: ");
             nombre = in.nextLine();
 

@@ -4,7 +4,9 @@ import com.ucreativa.vacunacion.entities.Amigo;
 
 import com.ucreativa.vacunacion.entities.Familiar;
 import com.ucreativa.vacunacion.entities.Persona;
+import com.ucreativa.vacunacion.repositories.FileRepository;
 import com.ucreativa.vacunacion.repositories.InMemoryRepository;
+import com.ucreativa.vacunacion.repositories.Repository;
 
 
 import java.util.Date;
@@ -16,7 +18,9 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
-        InMemoryRepository repo = new InMemoryRepository();
+        Repository repo = new FileRepository();
+
+
 
         Persona persona;
 

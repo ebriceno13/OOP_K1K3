@@ -9,6 +9,7 @@ import com.ucreativa.vacunacion.repositories.InMemoryRepository;
 import com.ucreativa.vacunacion.repositories.Repository;
 
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -62,7 +63,11 @@ public class Main {
 
             System.out.println("Vacuna -- Marca:");
             marca = in.nextLine();
-            repo.save(persona, marca, new Date());
+            try {
+                repo.save(persona, marca, new Date());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             System.out.println("Quiere imprimir Lista(S)");
             print = in.nextLine();
             if (print.equals("S")){

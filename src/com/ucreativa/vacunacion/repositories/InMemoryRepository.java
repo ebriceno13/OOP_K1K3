@@ -25,9 +25,9 @@ public class InMemoryRepository {
         List<String> lines = new ArrayList<>();
         SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
         for (BitacoraVacunas item : db){
-            lines.add((String) (item.getPersona().getNombre()
+            lines.add(item.getPersona().getNombre()
                                 + " - " + item.getMarca()
-                                + " - " + format.format(item.getFecha())));
+                                + " - " + format.format(item.getFecha()));
         }
         return lines;
     }

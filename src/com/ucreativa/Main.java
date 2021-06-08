@@ -1,13 +1,12 @@
 package com.ucreativa;
 
 import com.ucreativa.vacunacion.entities.Amigo;
-import com.ucreativa.vacunacion.entities.BitacoraVacunas;
+
 import com.ucreativa.vacunacion.entities.Familiar;
 import com.ucreativa.vacunacion.entities.Persona;
 import com.ucreativa.vacunacion.repositories.InMemoryRepository;
 
-import java.util.List;
-import java.util.ArrayList;
+
 import java.util.Date;
 import java.util.Scanner;
 

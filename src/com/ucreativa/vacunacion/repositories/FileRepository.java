@@ -19,7 +19,6 @@ public class FileRepository implements Repository{
         SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy hh:mm:ss");
         try{
             String ruta = "archivo.txt";
-
             File file = new File(ruta);
 
             if (!file.exists()){
@@ -28,7 +27,7 @@ public class FileRepository implements Repository{
 
         FileWriter fw = new FileWriter(file, true);
         BufferedWriter bw = new BufferedWriter(fw);
-        bw.append(persona.getNombre() + " - " + " Vacuna: " + marca+ " - " + format.format(fecha));
+        bw.append(persona.getNombre() + " - " + " Vacuna: " + marca + " - " + format.format(fecha));
         bw.close();
     } catch (Exception e) {
         e.printStackTrace();

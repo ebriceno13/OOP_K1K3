@@ -1,16 +1,9 @@
 package com.ucreativa;
 
-import com.ucreativa.vacunacion.entities.Amigo;
-
-import com.ucreativa.vacunacion.entities.Familiar;
-import com.ucreativa.vacunacion.entities.Persona;
 import com.ucreativa.vacunacion.repositories.FileRepository;
-import com.ucreativa.vacunacion.repositories.InMemoryRepository;
-import com.ucreativa.vacunacion.repositories.Repository;
-
+import com.ucreativa.vacunacion.services.BitacoraService;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -18,10 +11,9 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         Scanner in = new Scanner(System.in);
-        Repository repo = new FileRepository();
+        BitacoraService service = new BitacoraService(new FileRepository());
         String nombre, cedula, edad, riesgo, isAmigo,
-                relacion, facebook, parenteso, marca, print;
-        Persona persona;
+                relacion = "", facebook = "", parenteso = "", marca, print;
         while (true) {
             System.out.println("Nombre: ");
             nombre = in.nextLine();
@@ -44,23 +36,19 @@ public class Main {
                 System.out.println("Facebook: ");
                 facebook = in.nextLine();
 
-                persona = new Amigo(nombre, cedula, Integer.parseInt(edad),
-                        riesgo.equals("S"), relacion, facebook);
-
             } else {
                 System.out.println("Parentesco: ");
                 parenteso = in.nextLine();
-                persona = new Familiar(nombre, cedula, Integer.parseInt(edad),
-                        riesgo.equals("S"), parenteso);
             }
 
             System.out.println("Vacuna -- Marca:");
             marca = in.nextLine();
-                repo.save(persona, marca, new Date());
+            service.save(nombre, cedula, edad, riesgo, isAmigo,
+                        relacion, facebook, parenteso, marca);
             System.out.println("Quiere imprimir Lista(S)");
             print = in.nextLine();
             if (print.equals("S")){
-                for (String item : repo.get()){
+                for (String item : service.get()){
                     System.out.println(item);
                 }
 

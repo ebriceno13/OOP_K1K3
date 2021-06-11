@@ -10,5 +10,5 @@ public interface Repository {
 
     void save(Persona persona, String marca, Date fecha) throws IOException;
 
-    List<String> get() throws IOException;
+    List<String> get();
 }

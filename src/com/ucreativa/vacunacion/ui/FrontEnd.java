@@ -24,7 +24,7 @@ public class FrontEnd extends JFrame {
     private void construccionPantalla() {
 
         super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//cierra la app
-        super.setSize(400 , 200);//le da tamanho a la ventana
+        super.setSize(800 , 400);//le da tamanho a la ventana
         super.setLayout(new GridLayout(5 , 2));//acomoda los objetos
 
     }

@@ -1,11 +1,8 @@
 package com.ucreativa;
 
-import com.ucreativa.vacunacion.repositories.FileRepository;
-import com.ucreativa.vacunacion.services.BitacoraService;
 import com.ucreativa.vacunacion.ui.FrontEnd;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Main {
 
